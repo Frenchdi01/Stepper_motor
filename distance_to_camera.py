@@ -39,7 +39,7 @@ cv2.imshow('test', edged)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-video = cv2.VideoCapture(r'C:\Users\Dillon\Pictures\2018-02\IMG_4208.mp4')
+video = cv2.VideoCapture('IMG_4208.mp4')
 ok, frame = video.read()
 
 ok, frame1 = video.read()

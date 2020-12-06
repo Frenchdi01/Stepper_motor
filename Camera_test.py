@@ -8,11 +8,15 @@ Created on Sun Nov 29 19:52:30 2020
 
 from picamera import PiCamera
 from time import sleep
-import cv2
+#import cv2
 
 camera = PiCamera()
 camera.start_preview()
-sleep(5)
-camera.capture('/home/pi/Desktop/test2.jpg')
+sleep(2)
+#camera.capture('/home/pi/Desktop/test.jpg')
+#camera.start_recording('/home/pi/Desktop/test.jpg')
+camera.start_recording('/home/pi/Desktop/video_test.h264')
+sleep(10)
+camera.stop_recording()
 camera.stop_preview()
 camera.close()
