@@ -43,15 +43,16 @@ video = cv2.VideoCapture('video_test.h264')
 ok, frame = video.read()
 
 ok, frame1 = video.read()
-#tracker = cv2.TrackerKCF_create()
+tracker = cv2.TrackerKCF_create()
 #tracker = cv2.TrackerMIL_create()
-tracker = cv2.TrackerBoosting_create()
+#tracker = cv2.TrackerBoosting_create()
 #tracker = cv2.TrackerMOSSE_create()
 
 #bbox = (100, 200, 200, 500)
 #bbox = (160, 290, 100, 100)
 bbox = (330, 100, 100, 100)
-bbox = (1920/2, 1080/2, 250, 250)
+#bbox = (1920/2, 1080/2, 250, 250)
+
 ok = tracker.init(frame, bbox)
 
 while True:
