@@ -32,7 +32,7 @@ seq=[ [1,0,0,0],
 step_seq_num=0
 camera = PiCamera()
 camera.resolution = (720,720)
-camera.framerate = 30
+camera.framerate = 20
 
 # Generates a 3D RGB array and stores it in rawCapture
 raw_capture = PiRGBArray(camera, size=(720, 720))

@@ -27,7 +27,7 @@ seq=[ [1,0,0,0],
 rotate_dir=1
 step_seq_num=0
 
-step_sequence = [.25, .5, .75, 1, 1.25, 1.5, 1.75, 2,10]
+step_sequence = [.5]
 for rotation in step_sequence:
     number_of_steps = int(rotation*4096)
     rotate_dir=1
@@ -50,8 +50,8 @@ for rotation in step_sequence:
         elif step_seq_num<0:
             step_seq_num=7
         if number_of_steps/2==i:
-            #rotate_dir=rotate_dir*-1
+            rotate_dir=rotate_dir*1
             time.sleep(.5)
-        time.sleep(.001)
+        time.sleep(.006)
     time.sleep(.5)
 GPIO.cleanup()
