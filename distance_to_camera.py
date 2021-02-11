@@ -47,12 +47,18 @@ tracker = cv2.TrackerKCF_create()
 #tracker = cv2.TrackerMIL_create()
 #tracker = cv2.TrackerBoosting_create()
 #tracker = cv2.TrackerMOSSE_create()
+#tracker = cv2.TrackerCSRT_create()
+tracker = cv2.TrackerTLD_create()
 
 #bbox = (100, 200, 200, 500)
 #bbox = (160, 290, 100, 100)
 bbox = (330, 100, 100, 100)
+<<<<<<< HEAD
 #bbox = (1920/2, 1080/2, 250, 250)
 
+=======
+bbox = (1920/2, 1080/2-100, 350, 250)
+>>>>>>> 2829a2c75d00dbd82c902e2835e11d6fbd27f99b
 ok = tracker.init(frame, bbox)
 
 while True:
@@ -94,12 +100,12 @@ while True:
     k = cv2.waitKey(1) & 0xff
     if k == 27 : break
 
+
+
+
 cv2.imshow('test', frame1)
-
-
-
-bbox = (100, 250, 100, 100)
-p1 = (int(bbox[0]), int(bbox[1]))
+bbox = (1920/2, 1080/2, 350, 250)
+p1 = (int(bbox[0] - bbox[2]), int(bbox[1] - bbox[3]))
 p2 = (int(bbox[0] + bbox[2]), int(bbox[1] + bbox[3]))
 cv2.rectangle(frame1, p1, p2, (255,0,0), 2, 1)
 cv2.waitKey(0)
