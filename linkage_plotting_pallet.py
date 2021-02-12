@@ -38,7 +38,7 @@ h_y = DH*np.sin(np.radians(theta_h))
 pivot_triangle =  BC*np.sin(np.radians(60))
 
 theta_d=range(30,160,10)
-theta_h=range(190,191,10)
+theta_h=range(150,191,10)
 list_ax = []
 list_ay = []
 list_bx = []
